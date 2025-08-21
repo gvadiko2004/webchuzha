@@ -16,18 +16,18 @@ gsap.utils.toArray("section").forEach((section) => {
 // ==========================
 // Анимация фоновых изображений
 // ==========================
-gsap.utils.toArray(".back-img-scale").forEach((img) => {
-  gsap.to(img, {
-    scale: 1.2,
-    ease: "none",
-    scrollTrigger: {
-      trigger: img.closest("section"),
-      start: "top top",
-      end: "bottom top",
-      scrub: 0.5,
-    },
-  });
-});
+// gsap.utils.toArray(".back-img-scale").forEach((img) => {
+//   gsap.to(img, {
+//     scale: 1.2,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: img.closest("section"),
+//       start: "top top",
+//       end: "bottom top",
+//       scrub: 0.5,
+//     },
+//   });
+// });
 
 // ==========================
 // Применяем .active ко всем элементам с классом .selector при скролле к футеру
