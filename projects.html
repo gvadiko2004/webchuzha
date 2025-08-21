@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHUZHA PRO</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <style>
+      .hero__content-title span {
+        font-size: 60px !important;
+        opacity: 0.6;
+      }
+
+      @media (max-width: 440px) {
+        .hero__content-title span {
+          font-size: 32px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__inner">
+          <ul class="header__lang list-reset">
+            <li class="header__lang-item">
+              <a href="#!" class="header__lang-link active">UA</a>
+            </li>
+
+            <li class="header__lang-item">
+              <a href="#!" class="header__lang-link">RU</a>
+            </li>
+
+            <li class="header__lang-item">
+              <a href="#!" class="header__lang-link">EN</a>
+            </li>
+          </ul>
+
+          <a href="./index.html" class="header__logo logo"> CHUZHA PRO </a>
+
+          <button class="btn-reset header__burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="menu">
+        <div class="menu__inner">
+          <ul class="menu__list list-reset">
+            <li class="menu__list-item">
+              <a href="#!" class="menu__list-link">О НАС</a>
+            </li>
+
+            <li class="menu__list-item">
+              <a href="./projects.html" class="menu__list-link">ПРОЕКТЫ</a>
+            </li>
+
+            <li class="menu__list-item">
+              <a href="#!" class="menu__list-link">ЦЕНЫ</a>
+            </li>
+
+            <li class="menu__list-item">
+              <a href="#!" class="menu__list-link menu__list-contact"
+                >КОНТАКТЫ</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="form-overlay">
+        <div class="form">
+          <div class="form__top">
+            <span class="form__top-title">#Контактная форма</span>
+          </div>
+
+          <form method="post" class="form__content">
+            <div class="top">
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  placeholder="Имя*"
+                  class="input-form input-reset"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  placeholder="Телефон*"
+                  class="input-form input-reset"
+                  id="phone"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <textarea
+                  type="text"
+                  placeholder="Телефон*"
+                  class="textarea-form input-reset"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="bottom">
+              <div class="inp-bottom">
+                <span class="inp-bottom-title">#CHUZHA PRO</span>
+                <button class="btn-reset input-btn">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <button class="btn-reset btn-open-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="37"
+          height="37"
+          viewBox="0 0 37 37"
+          fill="none"
+        >
+          <path
+            opacity="0.58"
+            d="M35.2187 24.875L26.5033 20.9696L26.4793 20.9585C26.0268 20.765 25.5332 20.6873 25.0432 20.7325C24.5532 20.7777 24.0822 20.9444 23.6728 21.2175C23.6246 21.2493 23.5783 21.2839 23.534 21.3211L19.0311 25.1599C16.1784 23.7742 13.2332 20.8512 11.8475 18.0354L15.6918 13.4641C15.7288 13.4178 15.764 13.3716 15.7973 13.3216C16.0645 12.9133 16.2266 12.4453 16.2692 11.9592C16.3118 11.4731 16.2336 10.984 16.0415 10.5355V10.5133L12.125 1.78304C11.8711 1.19708 11.4344 0.70895 10.8803 0.391531C10.3261 0.0741109 9.68419 -0.0555772 9.05028 0.0218258C6.54346 0.351696 4.24243 1.58281 2.57696 3.48524C0.911494 5.38766 -0.00451575 7.83129 1.67401e-05 10.3597C1.67401e-05 25.0489 11.9511 37 26.6402 37C29.1686 37.0045 31.6123 36.0885 33.5147 34.423C35.4171 32.7576 36.6482 30.4565 36.9781 27.9497C37.0556 27.316 36.9262 26.6742 36.6091 26.1201C36.2921 25.566 35.8043 25.1292 35.2187 24.875ZM26.6402 34.04C20.3619 34.0331 14.3428 31.536 9.90337 27.0966C5.46396 22.6572 2.96689 16.638 2.96004 10.3597C2.95308 8.55316 3.60394 6.80583 4.79106 5.44406C5.97819 4.08228 7.62041 3.19917 9.41103 2.95965C9.41031 2.96704 9.41031 2.97447 9.41103 2.98185L13.2961 11.6769L9.47208 16.2539C9.43327 16.2985 9.39801 16.3462 9.36663 16.3963C9.08823 16.8235 8.92491 17.3154 8.8925 17.8243C8.86009 18.3332 8.95968 18.8418 9.18163 19.3009C10.8577 22.7289 14.3117 26.157 17.7768 27.8313C18.2392 28.0512 18.7508 28.1473 19.2615 28.1104C19.7722 28.0734 20.2646 27.9046 20.6906 27.6204C20.7381 27.5884 20.7838 27.5538 20.8275 27.5168L25.3248 23.6799L34.0199 27.5741C34.0199 27.5741 34.0347 27.5741 34.0403 27.5741C33.8037 29.3673 32.9219 31.0128 31.5599 32.2029C30.1978 33.393 28.4489 34.046 26.6402 34.04Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+
+      <main class="main">
+        <section class="hero">
+          <div class="container">
+            <div class="hero__inner">
+              <div class="hero__content">
+                <h1 class="hero__content-title cut-text-animated">
+                  <span>PROJECTS</span>
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          <!-- <p class="hero__content-date">2020</p> -->
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 1</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893B36AWLcu 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 2</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893bTN4jonk 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 3</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893Ji348SS1 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 4</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893uC5kwLgX 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 5</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893uZ8qwj9e 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 6</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/78761e76383307.5c681033a7f02 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 7</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893B36AWLcu 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 8</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893bTN4jonk 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 9</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893Ji348SS1 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 10</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893uC5kwLgX 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 11</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/1205893uZ8qwj9e 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+
+        <section class="project">
+          <a href="./gallery.html">
+            <div class="container">
+              <div class="project__inner">
+                <h3 class="project__title">Проект 12</h3>
+              </div>
+            </div>
+
+            <img
+              src="./images/78761e76383307.5c681033a7f02 1.jpg"
+              class="back-img-scale"
+              alt=""
+            />
+          </a>
+        </section>
+      </main>
+
+      <section class="footer">
+        <div class="footer__inner">
+          <div class="footer-top">
+            <div class="start">
+              <a
+                href="mailto:сhuzzhaya@gmail.com"
+                class="footer__gmail selector"
+              >
+                сhuzzhaya@gmail.com
+              </a>
+            </div>
+
+            <div class="end">
+              <div class="container-text selector">
+                <a href="#!" class="footer__phone">
+                  <span>Vilnius:</span> +37066155000
+                </a>
+              </div>
+
+              <!-- selector -->
+
+              <div class="container-text selector">
+                <a href="#!" class="footer__phone">
+                  <span>Kyiv:</span> +380939030001
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-text footer__logo selector">
+            <a href="#!" class="logo"> Chuzha pro </a>
+          </div>
+
+          <ul class="footer__social list-reset">
+            <li class="footer__social-item">
+              <a href="#!" class="footer__social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="19"
+                  viewBox="0 0 21 19"
+                  fill="none"
+                >
+                  <path
+                    d="M20.708 0.207877C20.5918 0.106196 20.4504 0.0385716 20.2991 0.012289C20.1477 -0.0139937 19.9922 0.00206199 19.8492 0.0587261L0.849972 7.59324C0.58071 7.69935 0.352748 7.89122 0.200406 8.13997C0.048064 8.38872 -0.0204124 8.68088 0.00528589 8.97248C0.0309842 9.26408 0.149466 9.53933 0.342895 9.75679C0.536323 9.97425 0.794228 10.1221 1.07778 10.1782L6.00056 11.1577V16.72C5.99959 17.023 6.08844 17.3192 6.2556 17.5704C6.42275 17.8216 6.66051 18.0162 6.93805 18.1288C7.21517 18.2435 7.51992 18.271 7.81268 18.2078C8.10544 18.1446 8.37266 17.9936 8.5796 17.7745L10.9533 15.2798L14.7192 18.62C14.9909 18.8642 15.3414 18.9994 15.7046 19C15.8637 18.9999 16.0219 18.9746 16.1733 18.925C16.4207 18.8454 16.6433 18.7015 16.8188 18.5077C16.9943 18.3138 17.1166 18.0768 17.1736 17.8201L20.9789 1.04484C21.0129 0.893546 21.0057 0.735722 20.958 0.58828C20.9102 0.440839 20.8238 0.30934 20.708 0.207877ZM14.9761 3.62791L6.57712 9.72316L1.92715 8.79881L14.9761 3.62791ZM7.50055 16.72V12.2093L9.8246 14.2747L7.50055 16.72ZM15.7064 17.48L7.95523 10.5924L19.1114 2.4898L15.7064 17.48Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer__social-item">
+              <a href="#!" class="footer__social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18.879 13.9431L15.1864 12.0969C15.041 12.0245 14.8791 11.9917 14.7171 12.0018C14.555 12.012 14.3984 12.0647 14.2632 12.1546L12.5681 13.2854C11.7899 12.8576 11.1495 12.2173 10.7217 11.4392L11.8526 9.74423C11.9426 9.60904 11.9953 9.45251 12.0054 9.29044C12.0155 9.12837 11.9827 8.96649 11.9103 8.82115L10.064 5.12885C9.98744 4.97431 9.86915 4.8443 9.72251 4.75355C9.57587 4.6628 9.40673 4.61494 9.23427 4.61539C8.01008 4.61539 6.83603 5.10165 5.97039 5.9672C5.10476 6.83275 4.61845 8.00669 4.61845 9.23077C4.6215 11.9228 5.69236 14.5037 7.5961 16.4072C9.49983 18.3108 12.081 19.3816 14.7733 19.3846C15.3794 19.3846 15.9797 19.2652 16.5397 19.0333C17.0997 18.8013 17.6085 18.4614 18.0372 18.0328C18.4658 17.6042 18.8058 17.0954 19.0377 16.5355C19.2697 15.9755 19.3891 15.3753 19.3891 14.7692C19.3892 14.5977 19.3416 14.4296 19.2515 14.2837C19.1614 14.1378 19.0324 14.0198 18.879 13.9431ZM14.7733 17.5385C12.5705 17.536 10.4586 16.66 8.90098 15.1025C7.34336 13.545 6.46722 11.4334 6.46478 9.23077C6.4646 8.59052 6.6863 7.96999 7.09214 7.47478C7.49799 6.97956 8.0629 6.64026 8.69076 6.51462L10.0155 9.16846L8.88809 10.8462C8.80384 10.9725 8.75207 11.1177 8.73738 11.2689C8.72268 11.42 8.74552 11.5725 8.80385 11.7127C9.46436 13.2824 10.7132 14.5311 12.283 15.1915C12.4237 15.2525 12.5773 15.2774 12.73 15.2641C12.8827 15.2508 13.0297 15.1997 13.1577 15.1154L14.8437 13.9915L17.4978 15.3162C17.3711 15.9447 17.0303 16.5098 16.5334 16.9151C16.0366 17.3203 15.4145 17.5407 14.7733 17.5385ZM12.0038 2.85779e-07C9.9318 -0.000451801 7.89501 0.535486 6.09165 1.55565C4.28829 2.57581 2.77979 4.04544 1.71298 5.8215C0.646178 7.59756 0.0574112 9.61953 0.00399032 11.6906C-0.0494306 13.7617 0.434314 15.8113 1.40814 17.64L0.0983979 21.5688C-0.0100917 21.8941 -0.0258361 22.2432 0.0529295 22.5769C0.131695 22.9107 0.301858 23.2159 0.544346 23.4583C0.786834 23.7008 1.09206 23.8709 1.42583 23.9497C1.75959 24.0285 2.10869 24.0127 2.43401 23.9042L6.36323 22.5946C7.97273 23.4506 9.75611 23.9287 11.578 23.9926C13.3999 24.0565 15.2124 23.7046 16.8779 22.9635C18.5435 22.2225 20.0183 21.1117 21.1904 19.7156C22.3626 18.3195 23.2012 16.6748 23.6427 14.9062C24.0842 13.1377 24.117 11.2918 23.7385 9.50866C23.36 7.72554 22.5803 6.05208 21.4584 4.61529C20.3365 3.1785 18.9021 2.01614 17.2639 1.21645C15.6257 0.416756 13.8268 0.000747958 12.0038 2.85779e-07ZM12.0038 22.1538C10.2186 22.1551 8.4647 21.685 6.91944 20.7912C6.8063 20.7255 6.68051 20.6847 6.5504 20.6714C6.4203 20.6581 6.28884 20.6725 6.16475 20.7138L1.84895 22.1538L3.28794 17.8385C3.32941 17.7145 3.34407 17.5831 3.33095 17.453C3.31782 17.3229 3.27719 17.1971 3.21177 17.0838C2.0924 15.1487 1.64298 12.8984 1.93322 10.6818C2.22347 8.46524 3.23715 6.4064 4.81703 4.82468C6.3969 3.24296 8.45465 2.22677 10.6711 1.93376C12.8875 1.64074 15.1386 2.08728 17.0753 3.2041C19.012 4.32092 20.526 6.04559 21.3824 8.11056C22.2388 10.1755 22.3897 12.4654 21.8118 14.6249C21.2338 16.7844 19.9593 18.6928 18.1859 20.0541C16.4126 21.4154 14.2395 22.1535 12.0038 22.1538Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer__social-item">
+              <a href="#!" class="footer__social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10 5.38462C9.08716 5.38462 8.19483 5.6553 7.43583 6.16245C6.67683 6.66959 6.08527 7.39042 5.73594 8.23377C5.38661 9.07712 5.29521 10.0051 5.4733 10.9004C5.65138 11.7957 6.09096 12.6181 6.73643 13.2636C7.3819 13.909 8.20429 14.3486 9.09958 14.5267C9.99488 14.7048 10.9229 14.6134 11.7662 14.2641C12.6096 13.9147 13.3304 13.3232 13.8376 12.5642C14.3447 11.8052 14.6154 10.9128 14.6154 10C14.6141 8.77631 14.1274 7.60311 13.2622 6.73784C12.3969 5.87256 11.2237 5.38589 10 5.38462ZM10 13.0769C9.39144 13.0769 8.79655 12.8965 8.29055 12.5584C7.78456 12.2203 7.39018 11.7397 7.15729 11.1775C6.92441 10.6153 6.86348 9.99659 6.9822 9.39972C7.10092 8.80286 7.39397 8.2546 7.82429 7.82429C8.2546 7.39397 8.80286 7.10092 9.39972 6.9822C9.99659 6.86348 10.6153 6.92441 11.1775 7.15729C11.7397 7.39018 12.2203 7.78456 12.5584 8.29055C12.8965 8.79655 13.0769 9.39144 13.0769 10C13.0769 10.8161 12.7527 11.5987 12.1757 12.1757C11.5987 12.7527 10.8161 13.0769 10 13.0769ZM14.6154 0H5.38462C3.957 0.00152714 2.58828 0.569324 1.5788 1.5788C0.569324 2.58828 0.00152714 3.957 0 5.38462V14.6154C0.00152714 16.043 0.569324 17.4117 1.5788 18.4212C2.58828 19.4307 3.957 19.9985 5.38462 20H14.6154C16.043 19.9985 17.4117 19.4307 18.4212 18.4212C19.4307 17.4117 19.9985 16.043 20 14.6154V5.38462C19.9985 3.957 19.4307 2.58828 18.4212 1.5788C17.4117 0.569324 16.043 0.00152714 14.6154 0ZM18.4615 14.6154C18.4615 15.6354 18.0563 16.6137 17.335 17.335C16.6137 18.0563 15.6354 18.4615 14.6154 18.4615H5.38462C4.36455 18.4615 3.38627 18.0563 2.66497 17.335C1.94368 16.6137 1.53846 15.6354 1.53846 14.6154V5.38462C1.53846 4.36455 1.94368 3.38627 2.66497 2.66497C3.38627 1.94368 4.36455 1.53846 5.38462 1.53846H14.6154C15.6354 1.53846 16.6137 1.94368 17.335 2.66497C18.0563 3.38627 18.4615 4.36455 18.4615 5.38462V14.6154ZM16.1538 5C16.1538 5.22821 16.0862 5.45129 15.9594 5.64104C15.8326 5.83079 15.6524 5.97868 15.4416 6.06602C15.2307 6.15335 14.9987 6.1762 14.7749 6.13168C14.5511 6.08715 14.3455 5.97726 14.1841 5.81589C14.0227 5.65452 13.9128 5.44893 13.8683 5.2251C13.8238 5.00128 13.8467 4.76928 13.934 4.55844C14.0213 4.3476 14.1692 4.1674 14.359 4.04061C14.5487 3.91383 14.7718 3.84615 15 3.84615C15.306 3.84615 15.5995 3.96772 15.8159 4.18411C16.0323 4.4005 16.1538 4.69398 16.1538 5Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- <div class="preloader">
+      <span class="preloader-line"></span>
+
+      <h3 class="preloader-line-title">Chuzha Pro</h3>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- <script src="./js/preloader.js"></script> -->
+    <script src="./js/form.js"></script>
+    <script src="./js/animation.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+    <script>
+      // Инициализация маски
+      Inputmask({
+        mask: "+380 (99) 999-99-99",
+        showMaskOnHover: false,
+      }).mask(document.getElementById("phone"));
+    </script> -->
+  </body>
+</html>
