@@ -9,7 +9,7 @@ gsap.utils.toArray("section").forEach((section) => {
     start: "top top",
     pin: true,
     pinSpacing: false,
-    scrub: 0.5,
+    scrub: 12.5,
   });
 });
 
