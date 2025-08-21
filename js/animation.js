@@ -18,15 +18,16 @@ gsap.utils.toArray("section").forEach((section) => {
 // ==========================
 gsap.utils.toArray(".back-img-scale").forEach((img) => {
   gsap.to(img, {
-    scale: 1.2,
-    ease: "none",
-    scrollTrigger: {
-      trigger: img.closest("section"),
-      start: "top top",
-      end: "bottom top",
-      scrub: 0.5,
-    },
-  });
+  scale: 1.2,
+  force3D: true,
+  ease: "none",
+  scrollTrigger: {
+    trigger: img.closest("section"),
+    start: "top top",
+    end: "bottom top",
+    scrub: 0.5,
+  },
+});
 });
 
 // ==========================

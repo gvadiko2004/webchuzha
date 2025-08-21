@@ -198,6 +198,9 @@ section.project h3 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .logo {
