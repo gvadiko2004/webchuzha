@@ -1,8 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// ==========================
-// Фиксируем секции при скролле
-// ==========================
 gsap.utils.toArray("section").forEach((section) => {
   ScrollTrigger.create({
     trigger: section,
@@ -13,26 +10,19 @@ gsap.utils.toArray("section").forEach((section) => {
   });
 });
 
-// ==========================
-// Анимация фоновых изображений
-// ==========================
 gsap.utils.toArray(".back-img-scale").forEach((img) => {
   gsap.to(img, {
-  scale: 1.2,
-  force3D: true,
-  ease: "none",
-  scrollTrigger: {
-    trigger: img.closest("section"),
-    start: "top top",
-    end: "bottom top",
-    scrub: 0.5,
-  },
-});
+    scale: 1.2,
+    ease: "none",
+    scrollTrigger: {
+      trigger: img.closest("section"),
+      start: "top top",
+      end: "bottom top",
+      scrub: 0.5,
+    },
+  });
 });
 
-// ==========================
-// Применяем .active ко всем элементам с классом .selector при скролле к футеру
-// ==========================
 ScrollTrigger.create({
   trigger: "section.footer",
   start: "top center",
@@ -42,7 +32,6 @@ ScrollTrigger.create({
       el.classList.add("active");
     });
 
-    // Поочередное применение классов к .preloader-line-title
     const titles = gsap.utils.toArray(".preloader-line-title");
     titles.forEach((el, i) => {
       setTimeout(() => {
@@ -70,9 +59,6 @@ ScrollTrigger.create({
   },
 });
 
-// ==========================
-// Мерцание .logo только при видимости футера
-// ==========================
 const logoBlink = gsap.fromTo(
   ".header .logo",
   { opacity: 0.8 },
