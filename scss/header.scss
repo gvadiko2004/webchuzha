@@ -81,6 +81,11 @@
 .header__logo {
   font-weight: 400;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
 }
 
 .header__burger-btn {

@@ -569,6 +569,16 @@ section.project h3 {
 .header__logo {
   font-weight: 400;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
 }
 
 .header__burger-btn {
