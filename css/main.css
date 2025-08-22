@@ -489,10 +489,6 @@ section.project h3 {
 .header {
   padding: 48px 20px;
   position: fixed;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50px);
-          transform: translateX(-50%) translateY(-50px);
-  opacity: 0;
   z-index: 30;
   width: 100%;
   -webkit-transition: 1.2s ease-in-out;
@@ -1532,6 +1528,116 @@ section.project h3 {
   .about-us__answer-subtitle {
     display: none;
   }
+}
+
+.gallery-slider {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 100;
+  padding: 20px;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.gallery-slider .swiper-gallery-item:first-child {
+  display: none;
+}
+.gallery-slider.active {
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+}
+
+.swiper-gallery {
+  height: 100px;
+}
+@media (max-width: 768px) {
+  .swiper-gallery {
+    position: static;
+    padding: 20px;
+    height: 100vh;
+  }
+}
+.swiper-gallery-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1005px;
+  height: 100%;
+  opacity: 0.2;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .swiper-gallery-item {
+    opacity: 1 !important;
+    background-size: contain;
+  }
+}
+.swiper-gallery-item.active {
+  opacity: 1;
+}
+.swiper-gallery-item:hover {
+  opacity: 1;
+}
+
+.gallery-slider__bottom-server {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 60%;
+  display: block;
+  margin: auto;
+  margin-top: 3%;
+}
+@media (max-width: 1280px) {
+  .gallery-slider__bottom-server {
+    width: 76%;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-slider__bottom-server {
+    display: none;
+  }
+}
+
+.gallery-slider__top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40px;
+}
+@media (max-width: 768px) {
+  .gallery-slider__top {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+.btn-close-gallery {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .footer {
