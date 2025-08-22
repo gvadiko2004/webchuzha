@@ -1,5 +1,5 @@
 const menuPhone = document.querySelector(".btn-open-menu");
-const heroContent = document.querySelector(".hero__content"); 
+const heroContent = document.querySelector(".hero__content");
 const menuContact = document.querySelector(".menu__list-contact"); // новая кнопка
 const formOverlay = document.querySelector(".form-overlay");
 const form = document.querySelector(".form");
@@ -20,7 +20,7 @@ function openForm() {
   if (formTitle) formTitle.classList.add("active");
   if (headerLang) headerLang.classList.add("active");
 
-  ignoreNextMenuClick = true; 
+  ignoreNextMenuClick = true;
 }
 
 // --- Клики по кнопкам открытия формы ---
@@ -80,3 +80,40 @@ document.addEventListener("keydown", function (e) {
     ignoreNextMenuClick = false;
   }
 });
+
+// price
+
+const price = document.querySelector(".price");
+const menuListPrice = document.querySelector(".menu__list--price");
+const priceClose = document.querySelector(".btn-price-close");
+const priceContentFagItem = document.querySelectorAll(".price-content__fag-item");
+
+priceContentFagItem.forEach((item) => {
+  const dropItem = item.querySelector(".price-content__lixt");
+
+  item.addEventListener("click", function () {
+    // Если этот элемент уже активен — убрать актив
+    if (dropItem.classList.contains("active")) {
+      dropItem.classList.remove("active");
+    } else {
+      // Убрать active у всех остальных
+      priceContentFagItem.forEach((otherItem) => {
+        const otherDrop = otherItem.querySelector(".price-content__lixt");
+        otherDrop.classList.remove("active");
+      });
+      // Добавить active текущему
+      dropItem.classList.add("active");
+    }
+  });
+});
+
+
+
+menuListPrice.addEventListener("click", function () {
+  price.classList.add("active");
+});
+
+priceClose.addEventListener("click", function () {
+  price.classList.remove("active");
+});
+

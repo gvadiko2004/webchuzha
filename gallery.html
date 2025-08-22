@@ -182,62 +182,6 @@
             </div>
           </div>
         </section>
-
-        <section class="gallery gallery-100">
-          <div class="gallery-item">
-            <img src="./images/1205893B36AWLcu 1.jpg" alt="" />
-          </div>
-        </section>
-
-        <section class="gallery gallery-50">
-          <div class="gallery-item">
-            <img src="./images/1205893bTN4jonk 1.jpg" alt="" />
-          </div>
-
-          <div class="gallery-item"></div>
-        </section>
-
-        <section class="gallery gallery-100">
-          <div class="gallery-item">
-            <img src="./images/1205893B36AWLcu 1.jpg" alt="" />
-          </div>
-        </section>
-
-        <section class="gallery gallery-50">
-          <div class="gallery-item order-1"></div>
-
-          <div class="gallery-item order-1">
-            <img src="./images/1205893bTN4jonk 1.jpg" alt="" />
-          </div>
-        </section>
-
-        <section class="gallery gallery-100">
-          <div class="gallery-item">
-            <img src="./images/1205893B36AWLcu 1.jpg" alt="" />
-          </div>
-        </section>
-
-        <section class="gallery gallery-50">
-          <div class="gallery-item">
-            <img src="./images/1205893bTN4jonk 1.jpg" alt="" />
-          </div>
-
-          <div class="gallery-item"></div>
-        </section>
-
-        <section class="gallery gallery-100">
-          <div class="gallery-item">
-            <img src="./images/1205893B36AWLcu 1.jpg" alt="" />
-          </div>
-        </section>
-
-        <section class="gallery gallery-50">
-          <div class="gallery-item order-1"></div>
-
-          <div class="gallery-item order-1">
-            <img src="./images/1205893bTN4jonk 1.jpg" alt="" />
-          </div>
-        </section>
       </main>
 
       <section class="footer">
@@ -330,9 +274,9 @@
     </div>
 
     <!-- <div class="preloader">
-        <span class="preloader-line"></span>
+      <span class="preloader-line"></span>
 
-        <h3 class="preloader-line-title">Chuzha Pro</h3>
+      <h3 class="preloader-line-title">Chuzha Pro</h3>
     </div> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -340,15 +284,6 @@
     <script src="./js/main.js"></script>
     <!-- <script src="./js/preloader.js"></script> -->
     <script src="./js/animation-static.js"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
-    <script>
-      // Инициализация маски
-      Inputmask({
-        mask: "+380 (99) 999-99-99",
-        showMaskOnHover: false,
-      }).mask(document.getElementById("phone"));
-    </script> -->
 
     <script>
       setTimeout(() => {
@@ -373,7 +308,43 @@
         galleryItems.forEach((item) => observer.observe(item));
       }, 400);
     </script>
+
+   <script>
+// Получаем данные из sessionStorage
+const images = JSON.parse(sessionStorage.getItem("selectedProjectGallery") || "[]");
+const title = sessionStorage.getItem("selectedProjectTitle") || "Галерея";
+
+const galleryContainer = document.querySelector("main");
+
+// Устанавливаем заголовок проекта
+const heroTitle = document.querySelector(".hero__content-title span");
+if (heroTitle) heroTitle.textContent = title;
+
+// Строим галерею
+images.forEach((src, index) => {
+  const isFull = index % 2 === 0;
+
+  if (isFull) {
+    const section = document.createElement("section");
+    section.className = "gallery gallery-100";
+    section.innerHTML = `<div class="gallery-item"><img src="${src}" alt="" /></div>`;
+    galleryContainer.appendChild(section);
+  } else {
+    const section = document.createElement("section");
+    section.className = "gallery gallery-50";
+
+    const galleryItem1 = index % 4 === 1 
+      ? `<div class="gallery-item"><img src="${src}" alt="" /></div>` 
+      : `<div class="gallery-item"></div>`;
+    const galleryItem2 = index % 4 === 1 
+      ? `<div class="gallery-item"></div>` 
+      : `<div class="gallery-item"><img src="${src}" alt="" /></div>`;
+
+    section.innerHTML = galleryItem1 + galleryItem2;
+    galleryContainer.appendChild(section);
+  }
+});
+</script>
+
   </body>
 </html>
-
-<!--  style="background-image: url('./images/1205893bTN4jonk\ 1.jpg')" -->

@@ -1,0 +1,64 @@
+.testimonials {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 100;
+    margin-bottom: 50px;
+  }
+}
+
+.swiper--slider {
+  margin: 0 auto;
+  padding: 120px;
+  margin: -120px;
+  width: 100%;
+    overflow: visible;
+
+  max-width: 1440px;
+
+  @media (max-width: 440px) {
+    padding: 0;
+    margin: 0;
+  }
+
+  .swiper-slide {
+    border-radius: 12px;
+    border: 1px solid rgba(217, 217, 217, 0.22);
+    padding: 28px 14px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .swiper-slide-text {
+    margin-bottom: 40px;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 100;
+  }
+
+  .swiper-slide-name {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .swiper-slide-user {
+    display: block;
+    margin-top: 24px;
+    border-radius: 100px;
+  }
+}
