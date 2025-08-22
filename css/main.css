@@ -489,6 +489,10 @@ section.project h3 {
 .header {
   padding: 48px 20px;
   position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50px);
+          transform: translateX(-50%) translateY(-50px);
+  opacity: 0;
   z-index: 30;
   width: 100%;
   -webkit-transition: 1.2s ease-in-out;
