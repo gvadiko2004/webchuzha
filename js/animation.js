@@ -14,7 +14,6 @@ gsap.utils.toArray("section").forEach((section) => {
   });
 });
 
-
 // Анимация масштабирования только для десктопа
 if (window.matchMedia("(min-width: 769px)").matches) {
   gsap.utils.toArray(".back-img-scale").forEach((img) => {

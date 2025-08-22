@@ -55,27 +55,34 @@ window.addEventListener("load", function () {
   }
 });
 
-
-
-
-window.addEventListener('load', function() {
-  const preloaderTitle = document.querySelector('.preloader-line-title');
+window.addEventListener("load", function () {
+  const preloaderTitle = document.querySelector(".preloader-line-title");
   if (preloaderTitle) {
     const tl = gsap.timeline();
 
     // Первый класс
     tl.add(() => {
-      preloaderTitle.classList.add('active');
+      preloaderTitle.classList.add("active");
     }, 0); // старт сразу
 
     // Второй класс через 1.2 сек (можно подкорректировать под duration transition)
     tl.add(() => {
-      preloaderTitle.classList.add('active-after');
+      preloaderTitle.classList.add("active-after");
     }, "+=.8");
 
     // Третий класс через еще 1.2 сек
     tl.add(() => {
-      preloaderTitle.classList.add('active-after-before');
+      preloaderTitle.classList.add("active-after-before");
     }, "+=.8");
   }
+});
+
+window.addEventListener("load", function () {
+  // Run after everything on the page is fully loaded
+  setTimeout(() => {
+    // Wait 2 seconds, then:
+    document.querySelector(".header").classList.add("active");
+    document.querySelector(".hero__content-date").classList.add("active");
+    document.querySelector(".hero").classList.add("active");
+  }, 3400);
 });

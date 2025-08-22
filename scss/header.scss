@@ -3,12 +3,20 @@
 
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50px);
+  opacity: 0;
+
   z-index: 30;
   width: 100%;
+  transition: 1.2s ease-in-out;
 
   @media (max-width: 440px) {
     padding: 28px 12px;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
   &__inner {
@@ -90,4 +98,13 @@
 
 .header__burger-btn {
   margin-left: auto;
+}
+
+.hero__content-date {
+  opacity: 0;
+  transition: 0.6s ease;
+
+  &.active {
+    opacity: 1;
+  }
 }
