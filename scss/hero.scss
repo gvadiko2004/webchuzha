@@ -11,7 +11,7 @@
   transition: background-position 4.6s ease;
 
   @media (max-width: 440px) {
-    transition: 2.6s ease-in-out;
+    transition: background-position 2.6s ease-in-out;
   }
 
   &.active {

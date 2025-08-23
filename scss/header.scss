@@ -10,6 +10,10 @@
   width: 100%;
   transition: 1.2s ease-in-out;
 
+  @media (max-width: 1440px) {
+    padding: 38px 20px;
+  }
+
   @media (max-width: 440px) {
     padding: 28px 12px;
   }

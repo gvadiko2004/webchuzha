@@ -1,17 +1,17 @@
 const swiperSlider = new Swiper(".swiper--slider", {
   direction: "horizontal", // Slides move horizontally
   loop: true, // Infinite loop of slides
-  slidesPerView: 4, // Show 4 slides at once
+  slidesPerView: 3, // Show 4 slides at once
   speed: 1200, // Slide transition speed (ms)
   spaceBetween: 34, // Space between slides (px)
 
-  autoplay: {
-    delay: 3000, // 3 seconds
-  },
+  // autoplay: {
+  //   delay: 3000, // 3 seconds
+  // },
 
   breakpoints: {
     1080: {
-      slidesPerView: 4, // Corrected key
+      slidesPerView: 3, // Corrected key
     },
     440: {
       slidesPerView: 3, // Corrected key
@@ -34,7 +34,7 @@ const swiperSlider = new Swiper(".swiper--slider", {
 
 const swiperGallery = new Swiper(".swiper-gallery", {
   direction: "horizontal",
-  loop: true,
+  loop: false, // выбери true или false, а не оба
   slidesPerView: 18,
   speed: 600,
   spaceBetween: 18,
@@ -42,47 +42,35 @@ const swiperGallery = new Swiper(".swiper-gallery", {
   grabCursor: true,
   simulateTouch: true,
   slideToClickedSlide: true,
+  touchRatio: 1,
+  touchAngle: 45,
 
   breakpoints: {
-    1440: {
-      slidesPerView: 18, // Corrected key
-    },
-    1280: {
-      slidesPerView: 14, // Corrected key
-    },
-    1080: {
-      slidesPerView: 8, // Corrected key
-    },
-    768: {
-      slidesPerView: 6, // Corrected key
-      spaceBetween: 8,
-    },
-    440: {
-      spaceBetween: 1.1,
-      slidesPerView: 6, // Corrected key
-    },
-    320: {
-      slidesPerView: 1.02, // Corrected key
-      spaceBetween: 8, // Space between slides (px)
-      loop: false
-    },
+    1440: { slidesPerView: 18 },
+    1280: { slidesPerView: 14 },
+    1080: { slidesPerView: 8 },
+    768: { slidesPerView: 6, spaceBetween: 8 },
+    440: { slidesPerView: 6, spaceBetween: 1.1 },
+    320: { slidesPerView: 1.02, spaceBetween: 8, loop: false },
   },
 
   on: {
     slideChange: function () {
       const currentSlide = this.slides[this.activeIndex];
-      const bgImage = currentSlide.style.backgroundImage;
+      const bgImage = getComputedStyle(currentSlide).backgroundImage;
       const preview = document.querySelector(".gallery-slider__bottom-server");
 
-      if (preview) {
-        // Плавная смена через opacity
+      if (preview && bgImage !== "none") {
         preview.style.transition = "opacity 0.4s ease";
         preview.style.opacity = 0;
 
         setTimeout(() => {
-          preview.src = bgImage.slice(5, -2); // убираем url(" ... ")
+          const match = bgImage.match(/url\(["']?(.*?)["']?\)/);
+          if (match && match[1]) {
+            preview.src = match[1];
+          }
           preview.style.opacity = 1;
-        }, 200); // таймаут для плавного исчезновения
+        }, 200);
       }
     },
   },
@@ -107,10 +95,3 @@ const swiperGallery = new Swiper(".swiper-gallery", {
 //     slidesCentered: true,
 //   },
 // },
-
-// // Включаем возможность листать мышью
-// grabCursor: true, // Курсор изменится на "руку", показывая, что можно тянуть
-// simulateTouch: true, // Разрешаем имитацию тач-событий мышью
-// touchRatio: 1, // Чувствительность свайпа мышью/тачем
-// touchAngle: 45, // Максимальный угол свайпа
-// slideToClickedSlide: true, // Переключение на слайд по клику

@@ -90,7 +90,6 @@
     position: sticky;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     height: max-content;
     top: 0;
     width: 100%;
@@ -119,7 +118,7 @@
     transition: 0.2s ease;
     opacity: 0.3;
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1440px) {
       padding: 60px 0;
     }
 

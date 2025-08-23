@@ -38,6 +38,11 @@
 .swiper-gallery {
   height: 100px;
 
+   @media (max-width: 1440px) {
+    height: 80px;
+  }
+
+
   @media (max-width: 768px) {
     position: static;
     padding: 20px;
@@ -81,8 +86,8 @@
   margin: auto;
   margin-top: 3%;
 
-  @media (max-width: 1280px) {
-    width: 76%;
+  @media (max-width: 1440px) {
+    width: 60%;
   }
 
   @media (max-width: 768px) {
@@ -94,7 +99,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 40px;
+  top: 60px;
 
   @media (max-width: 768px) {
     top: 50%;
@@ -107,3 +112,14 @@
     right: 20px;
     top: 20px;
 }
+
+// .swiper-gallery-item {
+//   max-height: 20px;
+//   overflow: hidden;
+
+//   transition: 0.2s ease;
+
+//   &.active-overflow {
+//     max-height: 100px;
+//   }
+// }
