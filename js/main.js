@@ -1,6 +1,6 @@
 const menuPhone = document.querySelector(".btn-open-menu");
 const heroContent = document.querySelector(".hero__content");
-const menuContact = document.querySelector(".menu__list-contact"); // новая кнопка
+// const menuContact = document.querySelector(".menu__list-contact"); // новая кнопка
 const formOverlay = document.querySelector(".form-overlay");
 const form = document.querySelector(".form");
 const btnBurger = document.querySelector(".header__burger-btn");
@@ -26,7 +26,7 @@ function openForm() {
 // --- Клики по кнопкам открытия формы ---
 menuPhone.addEventListener("click", openForm);
 if (heroContent) heroContent.addEventListener("click", openForm);
-if (menuContact) menuContact.addEventListener("click", openForm); // добавляем новую кнопку
+// if (menuContact) menuContact.addEventListener("click", openForm); // добавляем новую кнопку
 
 // --- Закрытие формы через кнопку-бургер ---
 btnBurger.addEventListener("click", function () {
@@ -86,7 +86,9 @@ document.addEventListener("keydown", function (e) {
 const price = document.querySelector(".price");
 const menuListPrice = document.querySelector(".menu__list--price");
 const priceClose = document.querySelector(".btn-price-close");
-const priceContentFagItem = document.querySelectorAll(".price-content__fag-item");
+const priceContentFagItem = document.querySelectorAll(
+  ".price-content__fag-item"
+);
 
 priceContentFagItem.forEach((item) => {
   const dropItem = item.querySelector(".price-content__lixt");
@@ -106,8 +108,6 @@ priceContentFagItem.forEach((item) => {
     }
   });
 });
-
-
 
 menuListPrice.addEventListener("click", function () {
   price.classList.add("active");

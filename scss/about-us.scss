@@ -113,10 +113,28 @@
     padding: 80px 0;
     text-align: left;
 
-    border-bottom: 1px solid #ffffffa7;
-
     transition: 0.2s ease;
     opacity: 0.3;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      transition: 0.6s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+        width: 100%0;
+      }
+    }
 
     @media (max-width: 1440px) {
       padding: 60px 0;
@@ -127,6 +145,7 @@
     }
 
     &.active {
+      border-bottom: 1px solid #ffffffa7;
       opacity: 1;
     }
 
@@ -166,16 +185,16 @@
 }
 
 .about-us__answer-subtitle {
-  font-size: 40px;
-  width: 50%;
+  font-size: 36px;
+  width: 100%;
 
   font-family: var(--third-family);
-  font-weight: 400;
+  font-weight: 100;
   line-height: 125%;
   text-transform: uppercase;
 
   @media (max-width: 1280px) {
-    width: 78%;
+    width: 100%;
   }
 
   @media (max-width: 768px) {

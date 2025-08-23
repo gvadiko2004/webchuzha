@@ -181,7 +181,7 @@
           <ul class="price-content__fag list-reset">
             <li class="price-content__fag-item">
               <button class="btn-reset price-content__fag-btn">
-                Basic 5€ | квадратный метр
+                Basic 5EUR | квадратный метр
               </button>
 
               <ul class="price-content__lixt list-reset">
@@ -209,7 +209,7 @@
 
             <li class="price-content__fag-item">
               <button class="btn-reset price-content__fag-btn">
-                Concept 17€ | квадратный метр
+                Concept 17EUR | квадратный метр
               </button>
 
               <ul class="price-content__lixt list-reset">
@@ -230,7 +230,7 @@
 
             <li class="price-content__fag-item">
               <button class="btn-reset price-content__fag-btn">
-                Full 23€ | квадратный метр
+                Full 23EUR | квадратный метр
               </button>
 
               <ul class="price-content__lixt list-reset">
@@ -320,29 +320,16 @@
               <div class="bottom">
                 <ul class="drop-input-list list-reset">
                   <li class="drop-input-list-item">
-                    <button class="btn-reset drop-input-list-btn">
-                      Полный сервис дизайна интерьера
-                    </button>
+                    <button class="btn-reset drop-input-list-btn">Basic</button>
                   </li>
                   <li class="drop-input-list-item">
                     <button class="btn-reset drop-input-list-btn">
-                      Полный сервис дизайна интерьера + авторский надзор
+                      CONCEPT
                     </button>
                   </li>
+
                   <li class="drop-input-list-item">
-                    <button class="btn-reset drop-input-list-btn">
-                      Полный сервис дизайна интерьера без участия заказчика
-                    </button>
-                  </li>
-                  <li class="drop-input-list-item">
-                    <button class="btn-reset drop-input-list-btn">
-                      Дизайн экстерьера и визуализация до 500 м²
-                    </button>
-                  </li>
-                  <li class="drop-input-list-item">
-                    <button class="btn-reset drop-input-list-btn">
-                      Дизайн экстерьера и визуализация до 1000 м²
-                    </button>
+                    <button class="btn-reset drop-input-list-btn">FULL</button>
                   </li>
                 </ul>
               </div>
@@ -412,19 +399,23 @@
               />
             </div>
 
-            <div class="sec-input">
+            <div class="sec-input inp-tel">
+              <span class="inp-tel-title">Номер телефона *</span>
+              
               <input
                 type="text"
                 class="input-reset price-content__form-input"
-                placeholder="+ 38 (063) 464 32 21 *"
+                placeholder=""
               />
             </div>
 
             <div class="sec-input">
+              <span class="inp-tel-title">E-mail (НЕОБЯЗАТЕЛЬНО) *</span>
+
               <input
                 type="text"
                 class="input-reset price-content__form-input"
-                placeholder="почта (НЕОБЯЗАТЕЛЬНО)"
+                placeholder="example@gmail.com"
               />
             </div>
 
@@ -438,7 +429,7 @@
 
             <div class="price-input">
               <span class="price-input-price">
-                <span class="count-price">СТОИМОСТЬ:</span> 1500€
+                <span class="count-price">СТОИМОСТЬ:</span> 1500EUR
               </span>
 
               <button class="btn-reset price-input-btn">
@@ -796,7 +787,9 @@
     <div class="preloader">
       <span class="preloader-line"></span>
 
-      <h3 class="preloader-line-title">Chuzha Pro</h3>
+      <div class="preloader-overflow">
+        <h3 class="preloader-line-title">Chuzha Pro</h3>
+      </div>
     </div>
 
     <script>
@@ -886,5 +879,29 @@
     <script src="./js/animation-static.js"></script>
     <script src="./js/about-us.js"></script>
     <script src="./js/swiper-min.js"></script>
+
+    <script>
+  // Получаем все дроп-лайсты
+  document.querySelectorAll(".drop-input").forEach((itemInput) => {
+    const dropDown = itemInput.querySelector(".bottom");
+
+  
+
+    // Делаем клик на верхнюю часть для открытия/закрытия
+    const top = itemInput.querySelector(".top");
+    top.addEventListener("click", () => {
+      dropDown.classList.toggle("active");
+    });
+
+    // При клике на кнопку в списке — меняем текст сверху
+    itemInput.querySelectorAll(".drop-input-list-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        itemInput.querySelector(".drop-input-name").textContent = btn.textContent;
+        dropDown.classList.remove("active"); // закрываем список
+      });
+    });
+  });
+</script>
+
   </body>
 </html>

@@ -1,63 +1,90 @@
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('../fonts/Roboto-ExtraLight.woff2') format('woff2');
+//     font-weight: 200;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('../fonts/Roboto-Light.woff2') format('woff2');
+//     font-weight: 300;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Poppins';
+//     src: url('../fonts/Poppins-Thin.woff2') format('woff2');
+//     font-weight: 100;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('../fonts/Roboto-Thin.woff2') format('woff2');
+//     font-weight: 100;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Poppins';
+//     src: url('../fonts/Poppins-Light.woff2') format('woff2');
+//     font-weight: 300;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Raleway';
+//     src: url('../fonts/Raleway-ExtraLight.woff2') format('woff2');
+//     font-weight: 300;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Raleway';
+//     src: url('../fonts/Raleway-Thin.woff2') format('woff2');
+//     font-weight: 100;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Poppins';
+//     src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+//     font-weight: 300;
+//     font-display: swap;
+// }
+
+
+// FOTNS
+
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-ExtraLight.woff2') format('woff2');
-    font-weight: 200;
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/chizha-forns/HelveticaNeueCyr-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Light.woff2') format('woff2');
-    font-weight: 300;
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/chizha-forns/HelveticaNeueCyr-Roman.woff2') format('woff2');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Thin.woff2') format('woff2');
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/chizha-forns/HelveticaNeueCyr-Thin.woff2') format('woff2');
     font-weight: 100;
+    font-style: normal;
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-ExtraLight.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Regular.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-}
 
 
 
 :root {
-  --font-family: "Roboto", sans-serif;
-  --second-family: "Poppins", sans-serif;
-  --third-family: "Raleway", sans-serif;
+  --font-family: "HelveticaNeueCyr", sans-serif;
+//   --second-family: "Poppins", sans-serif;
+//   --third-family: "Raleway", sans-serif;
 }

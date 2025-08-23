@@ -15,8 +15,8 @@
 
   .preloader-line-title {
     font-size: 24px;
-    opacity: 0.6;
-    color: #fff;
+    opacity: 1;
+    color: #767676;
     font-weight: 100;
     text-transform: uppercase;
 
@@ -90,4 +90,8 @@
       width: 100%;
     }
   }
+}
+
+.preloader-overflow {
+  overflow: hidden;
 }

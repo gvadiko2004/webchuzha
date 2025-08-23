@@ -1,25 +1,27 @@
 const swiperSlider = new Swiper(".swiper--slider", {
-  direction: "horizontal", // Slides move horizontally
-  loop: true, // Infinite loop of slides
-  slidesPerView: 3, // Show 4 slides at once
-  speed: 1200, // Slide transition speed (ms)
-  spaceBetween: 34, // Space between slides (px)
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 3,
+  speed: 1200,
+  spaceBetween: 34,
 
-  // autoplay: {
-  //   delay: 3000, // 3 seconds
-  // },
+  // Включаем прокрутку колёсиком мыши
+  mousewheel: {
+    forceToAxis: true, // прокрутка только по основной оси
+    sensitivity: 1, // чувствительность прокрутки, можно увеличить
+  },
 
   breakpoints: {
     1080: {
-      slidesPerView: 3, // Corrected key
+      slidesPerView: 3,
     },
     440: {
-      slidesPerView: 3, // Corrected key
+      slidesPerView: 3,
     },
     320: {
-      slidesPerView: 1.1, // Partial slide on very small screens
-      spaceBetween: 8, // Space between slides (px)
-      slidesCentered: true,
+      slidesPerView: 1.1,
+      spaceBetween: 8,
+      centeredSlides: true, // исправлено с slidesCentered
     },
   },
 });

@@ -9,8 +9,8 @@ gsap.utils.toArray("section").forEach((section) => {
     pinSpacing: false,
     scrub: {
       ease: "power1.inOut", // плавность во время скролла
-      delay: 0.2            // "инерция"
-    }
+      delay: 0.2, // "инерция"
+    },
   });
 });
 

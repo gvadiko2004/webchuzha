@@ -81,7 +81,7 @@ window.addEventListener("load", function () {
   // Run after everything on the page is fully loaded
   setTimeout(() => {
     // Wait 2 seconds, then:
-    document.querySelector(".header").classList.add("active");
+    // document.querySelector(".header").classList.add("active");
     document.querySelector(".hero__content-date").classList.add("active");
     document.querySelector(".hero").classList.add("active");
   }, 3400);
